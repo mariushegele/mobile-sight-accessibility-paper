@@ -16,7 +16,6 @@
 
 \usepackage{hyperref}
 \usepackage[german]{babel}
-\usepackage{lipsum}
 
 % references:
 \usepackage{csquotes}
@@ -28,40 +27,23 @@
 \makenoidxglossaries{}
 \input{acros.tex}
 
-
-% code snippets:
-\usepackage{listings}
-\usepackage[dvipsnames]{xcolor}
-\definecolor{ListingBackground}{HTML}{F8F8F8}
-\lstset{
-  basicstyle=\ttfamily\footnotesize,
-  keywordstyle=\color{blue}\ttfamily,
-  stringstyle=\color{red}\ttfamily,
-  commentstyle=\color{green}\ttfamily,
-  morecomment=[l][\color{magenta}]{\#},
-  frame=single,			        % border settings
-  frameround=ffff,
-  rulecolor=\color{darkgray}, % border color,
-  captionpos=b,			% sets the caption-position to bottom
-  xleftmargin=10pt,		        % margin left
-  xrightmargin=5pt,		        % margin right
-}
-
-% page layout:
+% page layout
 \usepackage[headsepline,footsepline]{scrlayer-scrpage}
 \clearpairofpagestyles
-\ihead{Short Title Title}
-\ohead{Short author}
+\ihead{Mobile Hilfen für Sehbehinderte}
+\ohead{8786673, TINF17A}
 \cfoot{\pagemark}
 
-% metadata:
-\title{Title}
+\title{Marktanalyse von Rehabilitationstechnologien zur Untersuchung von der Arbeit von sehbehinderten Menschen mit einem mobilen Endgerät}
 \date{\today}
-\author{Author}
-\publishers{Publisher}
-%\abstract{Abstract}
 
-% content:
+\author{Marius Hegele, 8786673}
+\publishers{Barrierefreiheit in Interaktiven Systemen\\Duale Hochschule Baden-Württemberg, Stuttgart}
+
+%\abstract{ArangoDB is a NoSQL database with a multi-model paradigm. In this paper we will demonstrate its characteristics and features. We will compare it with traditional SQL mechanisms and with other NoSQL databases.}
+
+\usepackage{lipsum}
+
 \begin{document}
 \maketitle
 
