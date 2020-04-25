@@ -1,8 +1,64 @@
 %!TEX root = ./main.tex
 
-\section[Short chapter title]{Long chapter title for document and TOC}
-\subsection[Short section title]{Long section title for document and TOC}
-\lipsum
-\section{A chapter}
-\subsection{A section}
-\lipsum
+\section{Einleitung}
+
+Menschen leiden unter sehr verschiedenartigen Sehbehinderungen. Krankheiten wie die Makula-Degeneration, Diabetische Retinopathie, Katarakt und Glaukom beeinträchtigen in unterschiedlichem Maße und unterschiedlicher Form das Sehvermögen. Gleichzeitig findet unser heutiges Leben vor allem in Zeiten der sozialen Distanzierung zu einem beträchtlichen Teil im digitalen Raum statt. Smartphones haben den Zugang zum Internet und damit zu wertvollen Informationen noch stärker verbreitet, als dies
+die Personal Computer bereits taten. So sind 4.2 der 4.57 Millionen aktiven Internet-Nutzer Nutzer mobilen Internets \cite{statista-internet}. Doch sind die damit verfügbar gemachten Informationen auch für Menschen mit Sehbehinderungen zugänglich? Welche Möglichkeiten der Interaktion gibt es für diese Menschen? Gibt es Technologie, die diesen das Leben in neuer Form erleichtert?
+
+In dieser Arbeit soll der aktuelle Markt auf bestehende Lösungen analysiert werden. Die zwei beliebtesten Betriebssysteme iOS und Android sollen dabei verglichen, aber auch Angebote Dritter demonstriert werden.
+
+\section{Rehabilitationstechnologien}
+
+\subsection{Vergrößerung}
+
+Eines der häufigsten Probleme bei der Benutzung von Smartphones, ist dass die dargestellten Inhalte aufgrund ihrer Detailliertheit von Sehbehinderten nicht erkannt werden können. Die hochauflösenden Bilder, die sich heutzutage mit Smartphone-Kameras schließen lassen, können herangezoomt werden. Ähnliche Funktionalität benötigen Sehbehinderte auch für Text. Die einfachste Möglichkeit dafür ist es, die Schriftgröße und Objektgröße des Systems zu erhöhen. Dies kann unter Umständen jedoch nicht genügen. Manche Menschen benötigen eine stärkere Vergrößerung von Buchstaben.
+Außerdem rechnen manche Apps nicht mit großen Schriftgrößen, wodurch Elemente ihrer Oberfläche, durch Überschneidungen oder begrenzende Rahmen nicht mehr lesbar sind.
+
+Sowohl iOS (Zoom) als auch Android (Magnification) bieten deswegen Lupen-Funktionen. Der ganze Bildschirm oder konfigurierbare Teile dessen können in größerer Form dargestellt werden. Dies funktioniert jedoch nicht sicher für Inhalte in Apps oder Webseiten Dritter. Text, der in Bildern integriert ist, macht dabei Schwierigkeiten, weil die Auflösung von Bildern begrenzt ist. In solchen Fällen bieten wieder beide Betriebssysteme eine
+Lösung in From von Optical Character Recognition (OCR). So kann mit VoiceOver bei iOS \cite{iOS} und \href{https://lens.google.com/}{Google Lens} bei Android Text in Bildern erkannt und vorgelesen werden. Dies ist insbesondere bei Webseiten hilfreich die keine ARIA Tags benutzen. Unter Umständen lassen sich mit diesen Tools hier die Bild- oder Videoinhalte klassifizieren und beschreiben.
+
+\subsection{Bildeinstellungen}
+
+Eine bekannte Form der Sehbehinderung liegt in der irrtümlichen Wahrnehmung von Farben. Die verbreitete Rot-Grün-Sehschwäche (Deuteranopie) macht neben anderen Farbfehlsichtigkeiten die Nutzung bestimmter Inhalte schwierig, da bei einem App Design diese nicht immer in Betracht gezogen werden. Für diesen Fall existieren Farbkorrektur-Filter, die global über die Darstellung gelegt werden können. Android und iOS bieten Voreinstellungen, die sich persönlich konfigurieren lassen \cite{iOS, Android}.
+
+Sehbehinderte können in manchen Fällen nur unter verstärkten Kontrast-Einstellungen die Abgrenzungen zwischen Objekten erkennen. Unter iOS lassen sich darüber hinaus systemübergreifend Transparenzeffekte reduzieren \cite{iOS}.
+
+Manche Sehbehinderungen\footnote{z.B. Diabetische Retinopathie} verursachen eine erhöhte Lichtempfindlichkeit. In solchen Fällen könnte eine einfache Farb-Invertierung von Vorteil sein. Die Annahme dabei ist, dass die
+meisten Bildschirminhalte hell sind, was potenziell für manche Darstellungen nicht zutrifft. Ein weiterer Nachteil dieses einfachen Ansatzes ist, ist dass dabei Bilder auch invertiert werden, was bei Bildern, die Menschen beinhalten sehr schnell befremdlich wirkt.
+\\Ein Betriebssystem-übergreifender ``Dunkel''-Modus berücksichtigt diese Aspekte. Sowohl iOS, als auch Android haben diesen mittlerweile integriert und die Oberflächen ihrer Apps entsprechend kompatibel gestaltet
+\cite{ios-colors, Android}. Doch noch nicht jede App eines Dritten unterstützt diesen Modus. Aus diesem Grund bietet iOS eine weitere Funktion namens `Smart Invert Colors'. In diesem Modus werden alle Farben des Bildschirms außer Bilder und Videos invertiert.
+\\Das Erkennen, ob ein Toggle Switch (eine Checkbox in Form eines Sliders) aktiv ist, hängt von der Erkennung der jeweiligen Farbe ab. Deswegen kann es Sinn machen, einzustellen dass solche Module Labels für `an'  oder `aus' anzeigen \cite{ios-colors}.
+
+Manche Menschen erfahren bei zu viel oder zu schneller wahrgenommener Bewegung Übelkeit oder sind dieser gegenüber in anderer Form sensitiv. Manche Apps haben jedoch ein sehr hohes Maß an visuellen Bewegungen, wie zum Beispiel Übergänge, Parallaxeffekte und Animationen. Unter iOS gibt es Einstellmöglichkeiten, dies zu reduzieren. So kann zum Beispiel ein gleitender Übergang durch einen sich auflösenden Übergang ersetzt werden. \cite{ios-reduce-motion}
+
+Wie sich zeigt lässt sich die Wahrscheinlichkeit Informationen auf dem Mobiltelefon zu erkennen durch bestimmte Einstellungen erhöhen. Wenn dies nicht hilft, ist es auch für nur sehbehinderte Menschen sinnvoll, sich mit den Funktionen eines Screen Readers vertraut zu machen, die blinden Personen die Benutzung eines Smartphones gar erst ermöglichen.
+
+
+\subsection{Screen Reader}
+
+Sowohl Android (TalkBack), als auch iOS (VoiceOver) kommen mit einer ausgiebigen Reihe an Funktionen, um die Objekte auf dem Bildschirm rein über sprachliche Ausgabe zu beschreiben. Die Gesten-gesteuerte Navigation ähnelt einem Abtasten des Bildschirminhalts. Die Mengen an verwendbaren Gesten sind äußerst groß. So wird eine effiziente Navigation ermöglicht. Bei Android lässt sich nicht nur der Touchscreen, sondern auch ein Fingerabdruck-Sensor für die Eingabe nutzen.
+
+Für spezifischere Aktionen bietet iOS den sogenannten `Rotor' und Android globale beziehungsweise lokale Kontext Menüs. Über diese lassen sich bestimmte Navigations- oder Bearbeitungs-Modi wie das Springen von Überschrift zu Überschrift oder das Auswählen und Kopieren von Text aktivieren. \cite{iOS, Android}
+
+\subsection{Spracheingabe}
+
+Die traditionellen Eingabe von Buchstaben über die Tastatur ist für Menschen mit Sehbehinderung potenziell nicht so einfach, vor allem da 26 Buchstaben in überdurchschnittlicher Größe sehr schnell den Bildschirm füllen. Durch die sprachliche Wiedergabe dessen Buchstaben der im Moment mit unter dem Finger der bedienden Person liegt, lässt sich die Tastatur auch in kleiner, unleserlicher Form bedienen. Die Texteingabe kann beschleunigt
+werden, indem statt einer Bestätigung durch zweite Berührung ein zweiter Finger explizit oder das Loslassen des ersten Fingers implizit als Eingabe gewertet wird \cite{iOS, Android}.
+
+Bei Android lässt sich der eingegebene Text neben bestimmten Gesten auch Buchstabe für Buchstabe mithilfe der Lautstärke-Tasten navigieren. Die Gegenwart von nur zwei Knöpfen bietet für visuell behinderte Menschen bereits einen Vorteil. Hier soll gesagt sein, dass sich die Spracheingabe mit älteren Mobiltelefonen, die noch über Tasten verfügen vermutlich einfacher gestaltet, als sie dies über einen heute üblichen Touchscreen ist. 
+
+Es lässt sich auch durch Handschrift auf dem Touchscreen Sprache eingeben. Eine unkonventionelle Form ist das wischende Verbinden von Tasten auf der Tastatur in Verbindung mit einer Autokorrektur wie das `Glide Typing' auf dem \href{https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin&hl=en}{Gboard}.
+
+Spracheingabe ist dank Fortschritten in der Erkennung von natürlicher Sprache aus Ton bereits gut möglich. Diese Funktion kennt man von den belibter werdenden persönlichen digitalen Assistenten. Alexa, Ok Google und Siri werden zusätzlich mit KI in Form eines Chatbots ausgestattet, der die Absichten einer Nutzer-Anfrage aus der natürlichen Sprache versucht zu verstehen. Basierend darauf führen sie proaktiv Schritte durch, die normalerweise des manuellen Öffnen und Bedienen einer App
+bedürfen. Manche Interfaces sind für Menschen mit Sehbehinderungen schwer (z.B. ein Kalender) oder gar nicht bedienbar. Diese Assistenten können den Zugang zu bestimmten Diensten vereinfachen oder gar eröffnen.
+
+\subsection{Rehabilitation für die physische Welt}
+
+Es wurden Technologien gezeigt, die Menschen mit Sehbehinderung die Nutzung der Angebote des digitalen Raumes ermöglicht. Da zu diesen Angeboten auch Dienste gehören, die ihnen sonst verwehrt bleiben oder nur zu geringerem Maße zur Verfügung stehen\footnote{z.B.\ der Zugang zur digitalisierten Form eines sonst unlesbaren Buches}, bietet sich so bereits eine Menge an Rehabilitationschancen. Doch Mobiltelefone können auch rehabilitierenden Einfluss auf die physische Existenz der Sehbehinderten haben.
+
+Die Handykamera kann als Lupe mit Erweiterungen fungieren. So können nicht nur die Buchstaben in einem Buch vergrößert werden, sondern auch farbliche Filter, Kontraststärkung und Invertierung angewendet werden \cite{ios-magnifier}. Navigations-Apps können Sehbehinderte durch Audiokommentare bei dem Erreichen von Orten begleiten. Apps wie \href{https://apps.apple.com/us/app/seeing-ai/id999062298}{Seeing AI} nutzen KI um nicht nur Text, sondern auch Menschen, Produkte, Szenen, Farben, Geld oder Licht im Bild der Handykamera zu erkennen und sprachlich oder akustisch zu beschreiben.
+Apps wie \href{https://play.google.com/store/apps/details?id=com.bemyeyes.bemyeyes}{BeMyEyes} nutzen einen Crowdsourcing-Ansatz, um das selbe Ziel zu erreichen. Sehende Menschen können sich freiwillig melden, ihre Augen einem im diesem Moment danach fragenden Sehbehinderten zu spenden.
+
+\section{Zusammenfassung}
+
+In erster Linie erscheinen Smartphones durch den Mangel an Tasten, als eine schlechtere Wahl für Menschen mit Sehbehinderung. Mobile Betriebssysteme versuchen über unterschiedliche Optionen auch diesen den Zugang zu ihren Funktionen zu ermöglichen. Der Touchscreen ist als unentscheidender Aspekt potentiell wegzudenken. Der Zugang zum mobilen Internet eröffnet Sehbehinderten Rehabilitationsmöglichkeiten in Form moderner Technologie wie dem einfachen Zugriff auf Informationen, optischer Bild- und Texterkennung und Vernetzung. 
