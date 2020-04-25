@@ -1,0 +1,78 @@
+\documentclass[
+	pdftex,
+	oneside,  
+	12pt,			    % fontsize
+	parskip=half,		    % Space (in lines) between paragraphs
+	headheight = 14.5pt,    % Header hight
+	headsepline,		    % Line after header
+	footheight = 14.5pt,	    % Footer height
+	footsepline,		    % Line before footer
+	DIV=calc,		    % Calculate print space
+	headinclude=false,   % Exclude header from print space
+	footinclude=false,	    % Exclude footer from print space
+	listof=totoc,		    % Show List of Figures/Tables in Contents
+	toc=bibliography,	    % Show Bibliography in Contents
+]{scrartcl}
+
+\usepackage{hyperref}
+\usepackage[german]{babel}
+\usepackage{lipsum}
+
+% references:
+\usepackage{csquotes}
+\usepackage[backend = biber]{biblatex}
+\addbibresource{bibliography.bib}
+
+% abbreviations:
+\usepackage[acronym]{glossaries}
+\makenoidxglossaries{}
+\input{acros.tex}
+
+
+% code snippets:
+\usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{ListingBackground}{HTML}{F8F8F8}
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  commentstyle=\color{green}\ttfamily,
+  morecomment=[l][\color{magenta}]{\#},
+  frame=single,			        % border settings
+  frameround=ffff,
+  rulecolor=\color{darkgray}, % border color,
+  captionpos=b,			% sets the caption-position to bottom
+  xleftmargin=10pt,		        % margin left
+  xrightmargin=5pt,		        % margin right
+}
+
+% page layout:
+\usepackage[headsepline,footsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ihead{Short Title Title}
+\ohead{Short author}
+\cfoot{\pagemark}
+
+% metadata:
+\title{Title}
+\date{\today}
+\author{Author}
+\publishers{Publisher}
+%\abstract{Abstract}
+
+% content:
+\begin{document}
+\maketitle
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\include{content}
+
+\appendix
+\printnoidxglossary[type=\acronymtype,numberedsection=autolabel]
+\newpage
+\printbibliography{}
+
+\end{document}
